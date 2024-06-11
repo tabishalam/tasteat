@@ -1,0 +1,656 @@
+@import "../../styles/_main";
+
+.header {
+    height: 100vh;
+    background: $color__secondary;
+    padding: 0 20rem;
+
+    @include flex__row;
+    align-items: center;
+    gap: 6rem;
+
+    &__text {
+        flex: 1;
+        align-items: flex-start;
+
+        @include flex__column;
+        gap: 3rem;
+
+        &--heading {
+            @extend .cormorant__bold--100;
+            line-height: 77.1%;
+            color: $color__white;
+        }
+
+        &--subheading {
+            @extend .josefin__regular--20;
+            color: $color__light--gray;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__image {
+        position: relative;
+        height: 100%;
+        width: 100%;
+
+        &--image1 {
+            position: absolute;
+            top: 14rem;
+            left: 1rem;
+
+            height: calc(100vh - 14rem);
+            border: 3rem solid #3e434a;
+            border-bottom: none;
+            border-radius: 50% 50% 0 0;
+            z-index: 2;
+        }
+
+    }
+
+    &__background {
+        position: absolute;
+        top: 6rem;
+        right: -20rem;
+        z-index: 1;
+    }
+}
+
+
+.about {
+    @include flex__column;
+    gap: 10rem;
+
+    width: 100%;
+    padding: 10rem 20rem;
+    background-color: $color__soft--cream;
+
+    &__contact {
+        @include flex__row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__story {
+        @include flex__row;
+
+        &--image {
+            max-width: 50%;
+            padding-right: 5rem;
+            object-fit: cover;
+            object-position: center;
+            border-right: 1px solid #B29A90;
+        }
+
+        &__text {
+            @include flex__column;
+            gap: 2rem;
+
+            padding-left: 5rem;
+
+            &--middle {
+                @include flex__row;
+                gap: 3rem;
+            }
+
+            &--bottom {
+                @include flex__column;
+                gap: 2rem
+            }
+        }
+    }
+
+    & .story__text--card {
+        @include flex__column;
+        gap: 1rem;
+
+        &--title {
+            @extend .cormorant__bold--40;
+            color: $color__secondary;
+        }
+
+        &--description {
+            @extend .josefin__regular--20;
+            color: $color__medium--gray;
+        }
+
+        &--signature {
+            width: fit-content;
+        }
+    }
+}
+
+
+.menu {
+    padding: 10rem 20rem;
+
+    @include flex__column;
+    gap: 1rem;
+
+    &__container {
+        @include flex__row;
+        gap: 10rem;
+        // justify-content: space-between;
+        width: 100%;
+    }
+
+    &__special {
+        @include flex__column;
+        gap: 4rem;
+
+        max-width: 36%;
+
+        &--text {
+            @include flex__column;
+            gap: 1rem;
+        }
+
+        &--title {
+            @extend .cormorant__bold--40;
+            color: $color__secondary;
+        }
+
+        &--description {
+            @extend .josefin__regular--20;
+            color: $color__medium--gray;
+        }
+    }
+
+    &__items {
+        @include flex__column;
+        flex-grow: 1;
+        gap: 4rem;
+
+        &--title {
+            @extend .cormorant__bold--40;
+            color: $color__secondary;
+        }
+    }
+}
+
+
+.testimonial {
+    &__text {
+        @include flex__column;
+        gap: 4rem;
+
+        padding: 10rem 0 10rem 20rem;
+        background-color: $color__secondary;
+    }
+
+    &__header {
+        @include flex__column;
+        gap: 1rem;
+
+        &--title {
+            @extend .cormorant__bold--40;
+            color: $color__white;
+        }
+
+        &--description {
+            @extend .josefin__regular--20;
+            color: $color__light--gray;
+        }
+    }
+
+    &__cards {
+        @include flex__row;
+        gap: 2rem;
+    }
+
+    &__navigation {
+        @include flex__row;
+        gap: 1rem;
+
+        justify-content: center;
+        align-items: center;
+
+        &--btn {
+            width: 1.8rem;
+            height: 1.8rem;
+            border-radius: 50%;
+            background: $color__dark--medium--gray;
+        }
+
+        & .active {
+            background: $color__light--gray;
+        }
+    }
+
+    &__image {
+        object-fit: contain;
+        width: 100%;
+    }
+}
+
+
+.special {
+    @include flex__column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+
+    padding: 10rem 20rem 5rem 20rem;
+
+    &__header {
+        @include flex__column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        &--title {
+            @extend .cormorant__bold--40;
+            color: $color__secondary;
+        }
+
+        &--description {
+            @extend .josefin__regular--20;
+            color: $color__medium--gray;
+
+            text-align: center;
+            inline-size: 67rem;
+            line-height: 126.5%;
+        }
+    }
+
+    &__cards {
+        @include flex__row;
+        gap: 2rem
+    }
+
+    &__burgerCard {
+        @include flex__row-center;
+        padding: 3rem;
+        object-fit: cover;
+        background-color: #C6EAF2;
+        background-image: url("/burger__background.png");
+        background-position: 70% 0%;
+        background-repeat: no-repeat;
+
+        &--info {
+            @include flex__column;
+            gap: 2rem;
+        }
+
+        &--offerPrice {
+            height: 13.8rem;
+            width: 13.8rem;
+            margin-bottom: 1rem;
+        }
+
+        &--discount {
+            width: fit-content;
+            @extend .josefin__medium--13;
+            text-transform: uppercase;
+            color: $color__secondary;
+            letter-spacing: 0.27rem;
+            padding: .8rem  0 .4rem 0;
+            border: 1px solid $color__secondary;
+            border-left: none;
+            border-right: none;
+        }
+
+        &--title {
+            @extend .cormorant__bold--30;
+            color: $color__secondary;
+            line-height: 77.1%;
+        }
+
+        &--description {
+            @extend .josefin__regular--16;
+            color: $color__medium--gray;
+        }
+
+        &--burger {
+            width: 28rem;
+        }
+    }
+
+
+    &__pizzaCard {
+        @include flex__row-center;
+        padding: 3rem;
+        object-fit: cover;
+        background-color: #D7D7D7;
+        background-image: url("/pizza__background.png");
+        background-position: 80% 100%;
+        background-repeat: no-repeat;
+
+        &--info {
+            @include flex__column;
+            gap: 2rem;
+        }
+
+        &--offerPrice {
+            height: 13.8rem;
+            width: 13.8rem;
+            margin-bottom: 1rem;
+        }
+
+        &--discount {
+            width: fit-content;
+            @extend .josefin__medium--13;
+            text-transform: uppercase;
+            color: $color__secondary;
+            letter-spacing: 0.27rem;
+            padding: .8rem  0 .4rem 0;
+            border: 1px solid $color__secondary;
+            border-left: none;
+            border-right: none;
+        }
+
+        &--title {
+            @extend .cormorant__bold--30;
+            color: $color__secondary;
+            line-height: 77.1%;
+        }
+
+        &--description {
+            @extend .josefin__regular--16;
+            color: $color__medium--gray;
+        }
+
+        &--pizza {
+            width: 28rem;
+        }
+    }
+}
+
+
+.popular {
+    @include flex__column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+
+    padding: 5rem 20rem 10rem 20rem;
+
+    &__header {
+        @include flex__column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        &--title {
+            @extend .cormorant__bold--40;
+            color: $color__secondary;
+        }
+
+        &--description {
+            @extend .josefin__regular--20;
+            color: $color__medium--gray;
+
+            text-align: center;
+            inline-size: 67rem;
+            line-height: 126.5%;
+        }
+    }
+
+    &__dishes {
+        @include flex__row;
+        gap: 2rem;
+    }
+}
+
+
+.service {
+    padding: 15rem 20rem;
+
+    @include flex__row;
+    justify-content: space-between;
+    background-color: $color__secondary;
+
+    &__header {
+        @include flex__column;
+        gap: 2rem;
+
+
+        max-width: 35%;
+
+        &--title {
+            @extend .cormorant__bold--40;
+            line-height: 77.1%;
+            color: $color__white;
+        }
+
+        &--description {
+            @extend .josefin__regular--20;
+            color: $color__light--gray;
+            line-height: 126.1%
+       }
+    }
+
+    &__cards {
+        @include flex__row;
+        gap: 2rem;
+    }
+}
+
+
+.blog {
+    @include flex__column;
+    gap: 5rem;
+
+    padding: 10rem 20rem;
+
+    &__header {
+        @include flex__column;
+        align-items: center;
+        gap: 1rem;
+
+        &--title {
+            @extend .cormorant__bold--40;
+            color: $color__secondary;
+            line-height: 77.1%;
+        }
+        
+        &--description {
+            @extend .josefin__regular--20;
+            color: $color__medium--gray;
+            text-align: center;
+            line-height: 126.1%;
+            inline-size: 60rem;
+       }
+    }
+
+    
+    &__posts {
+        @include flex__row;
+        gap: 4rem;
+    }
+}
+
+
+.reservation {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("/reservation__background.png");
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        filter: opacity(50%);
+        background-color: $color__secondary;
+        z-index: 1;
+    }
+
+    &__form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include flex__column;
+        gap: 3rem;
+        justify-content: center;
+        align-items: center;
+
+        padding: 10rem;
+        background-color: rgba($color__secondary, .8);
+
+        z-index: 2;
+
+
+        &--header {
+            @include flex__column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        &--title {
+            @extend .cormorant__bold--40;
+            color: $color__white;
+        }
+
+        &--inputHolder {
+            @include flex__row;
+            gap: 1rem;
+            
+            width: 100%;
+
+            & input {
+                width: 100%;
+                border: none;
+                outline: none;
+                padding: 1rem 1rem;
+                background: transparent;
+                border: 1px solid #858585;
+
+                @extend .josefin__medium--22;
+
+                &::placeholder {
+                    @extend .josefin__medium--22;
+                    color: $color__white;
+                }
+            }   
+        }
+
+        &--btn {
+            @include flex;
+            justify-content: center;
+            align-items: center;
+
+            border: none;
+            outline: none;
+            padding: 1.8rem 3rem;
+            color: $color__secondary;
+            background: $color__white;
+            @extend .josefin__medium--22;
+        }
+    }
+}
+
+
+.footer {
+    padding: 10rem 20rem 5rem 20rem;
+    background: $color__secondary;
+
+    @include flex__column;
+    gap: 5rem;
+
+    &__top {
+        @include flex__row;
+        align-items: center;
+        justify-content: space-between;
+
+        &--instagramFeed {
+            @extend .josefin__medium--22;
+            color: $color__white;
+            line-height: 126.5%;
+            text-decoration: underline;
+        }
+
+        &--social {
+            @include flex__row;
+            gap: 2rem;
+            align-items: center;
+        }
+    }
+
+    &__middle {
+        @include flex__row;
+        justify-content: space-between;        
+
+        &--contact {
+            @include flex__column;
+            gap: 1rem;
+
+            @extend .josefin__regular--20;
+            color: $color__white;
+            line-height: 169.5%;
+        }
+
+        &--newsletter {
+            @include flex__column;
+            gap: 2rem;
+
+            &--heading {
+                @extend .josefin__regular--20;
+                inline-size: 40rem;
+                color: $color__white;
+            }
+
+            &--input {
+                @include flex__row;
+
+                & input {
+                    width: 100%;
+                    outline: none;
+                    border: 1px solid $color__white;
+                    border-right: none;
+                    @extend .josefin__medium--22;
+                    padding: 1.8rem 2.4rem;
+                    background: transparent;
+                }
+
+                & button {
+                    color: $color__secondary;
+                    @extend .josefin__medium--22;
+                    border: 1px solid $color__white;
+                    background: $color__white;
+
+                    padding: 0 4rem;
+                }
+            }
+        }
+
+        &--workingHour {
+            @include flex__column;
+            align-items: end;
+            gap: 2rem;
+
+            &--time {
+                @include flex__column;
+                align-items: end;
+                gap: 2rem;
+    
+                @extend .josefin__regular--20;
+                color: $color__white;
+            }
+        }
+    }
+}
+
+.credit {
+    @include flex__row;
+    align-items: center;
+    justify-content: space-between;
+
+    @extend .josefin__regular--20;
+    color: $color__white;
+    padding: 2rem 20rem;
+    border-top: 1px solid $color__light--gray;
+    background-color: $color__secondary;
+}
+
+.primaryText {
+    color: $color__primary;
+}

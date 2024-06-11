@@ -1,0 +1,21 @@
+@import "../../styles/_main";
+
+.section__header {
+    @include flex__column;
+    gap: 2rem;
+
+
+    max-width: 35%;
+
+    &--title {
+        @extend .cormorant__bold--40;
+        line-height: 77.1%;
+        color: $color__white;
+    }
+
+    &--description {
+        @extend .josefin__regular--20;
+        color: $color__light--gray;
+        line-height: 126.1%
+   }
+}

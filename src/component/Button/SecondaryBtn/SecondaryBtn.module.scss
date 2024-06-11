@@ -1,0 +1,12 @@
+@import "../../../styles/_main";
+
+.secondary {
+    outline: none;
+    padding: 2rem 3rem;
+    width: fit-content;
+    background: transparent;
+    color: $color__light--gray;
+    border: 1px solid $color__primary;
+
+    @extend .josefin__regular--20;
+}

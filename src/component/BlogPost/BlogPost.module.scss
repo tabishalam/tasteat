@@ -1,0 +1,59 @@
+@import "../../styles/_main";
+
+.post {
+    border: 1px solid $color__medium--gray;
+
+    &__imageContainer {
+        position: relative;
+    }
+
+    &__backdrop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        @include flex;
+        justify-content: center;
+        align-items: center;
+
+        visibility: hidden;
+        transition: all .3s ease;
+        background: rgba($color__secondary, .6);        
+    }
+
+    &:hover &__backdrop {
+        visibility: visible;
+        transition: all .3s ease;
+    }
+
+    &--image {
+        object-fit: cover;
+        width: 100%;
+    }
+
+    &--info {
+        @include flex__column;
+        gap: 2rem;
+        padding: 3rem 2rem;
+    }
+
+    &--tag {
+        @include flex__row;
+        gap: 4rem;
+    }
+
+    &--title {
+        @extend .cormorant__bold--35;
+        color: $color__secondary;
+        line-height: 120%;
+    }
+
+    &--description {
+        @extend .josefin__regular--16;
+        color: $color__medium--gray;
+        line-height: 126.1%;
+    }
+
+}

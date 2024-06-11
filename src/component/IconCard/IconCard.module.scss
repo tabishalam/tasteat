@@ -1,0 +1,25 @@
+@import "../../styles/_main";
+
+.icon__card {
+    @include flex__row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    &--icon {
+        padding: 1rem;
+        border-radius: 5rem;
+        background-color: $color__secondary;
+    }
+
+    &--title {
+        @extend .cormorant__bold--30;   
+        color: $color__secondary;
+    }
+
+    &--description {
+        @extend .josefin__regular--18;
+        line-height: 126.5%;
+        color: $color__dark--medium--gray;
+    }
+}

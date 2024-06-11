@@ -1,0 +1,10 @@
+@import "../../../styles/_main";
+
+.goldenBtn {
+    padding: 2rem 3rem;
+    width: fit-content;
+    color: $color__primary;
+    background: transparent;
+    @extend .josefin__medium--22;
+    border: 1px solid $color__primary;
+}

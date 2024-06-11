@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,700;1,400&family=Josefin+Sans:wght@100..700&display=swap');
+
+.cormorant__italic {
+    font-family: "Cormorant Infant", serif;
+    font-weight: 400;
+    font-style: italic;
+
+    &--22 {
+        @extend .cormorant__italic;
+        font-size: 2.2rem;
+    }
+}
+
+.cormorant__bold {
+    font-family: "Cormorant Infant", serif;
+    font-weight: 700;
+    font-style: normal;
+
+    &--100 {
+        @extend .cormorant__bold;
+        font-size: 10rem;
+    }
+
+    &--65 {
+        @extend .cormorant__bold;
+        font-size: 6.5rem;
+    }
+
+    &--60 {
+        @extend .cormorant__bold;
+        font-size: 6rem;
+    }
+
+    &--55 {
+        @extend .cormorant__bold;
+        font-size: 5.5rem;
+    }
+
+    &--40 {
+        @extend .cormorant__bold;
+        font-size: 4rem;
+    }
+
+    &--35 {
+        @extend .cormorant__bold;
+        font-size: 3.5rem;
+    }
+
+    &--30 {
+        @extend .cormorant__bold;
+        font-size: 3rem;
+    }
+
+    &--25 {
+        @extend .cormorant__bold;
+        font-size: 2.5rem;
+    }
+}
+
+
+.josefin {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    &__regular {
+        @extend .josefin;
+        font-weight: 400;
+
+        &--16 {
+            @extend .josefin__regular;
+            font-size: 1.6rem;           
+        }
+
+        
+        &--18 {
+            @extend .josefin__regular;
+            font-size: 1.8rem;           
+        }
+    
+        &--20 {
+            @extend .josefin__regular;
+            font-size: 2rem;           
+        }
+    }
+
+    &__medium {
+        @extend .josefin;
+        font-weight: 500;
+
+        &--13 {
+            @extend .josefin__medium;
+            font-size: 1.4rem;
+        }
+
+
+        &--15 {
+            @extend .josefin__medium;
+            font-size: 1.5rem;
+        }
+
+        &--22 {
+            @extend .josefin__medium;
+            font-size: 2.2rem;
+        }
+    }
+}

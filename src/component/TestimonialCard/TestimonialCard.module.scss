@@ -1,0 +1,61 @@
+@import "../../styles/_main";
+
+.testimonial__card {
+    padding: 4rem;
+    width: fit-content;
+    background: $color__slate--gray;
+
+    &--profile {
+        @include flex__row;
+        align-items: center;
+        gap: 2rem;
+
+        padding-bottom: 3rem;
+        border-bottom: 1px solid #797E89;
+
+        &--image {
+            position: relative;
+        }
+
+        &--image::before {
+            content: url("/doubleQuote.svg");
+
+            @include flex;
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: .8rem;
+            border-radius: 50%;
+            background: $color__primary;
+            border: 2px solid $color__secondary;
+        }
+
+        &--info {
+            @include flex__column;
+            gap: 1rem;
+        }
+
+        &--name {
+            @extend .cormorant__bold--30;
+            line-height: 77.1%;
+            color: $color__white;
+        }
+
+        &--location {
+            @extend .josefin__regular--20;
+            line-height: 126.5%;
+            color: $color__primary;
+        }
+    }
+
+    &--message {
+        @extend .cormorant__italic--22;
+        padding-top: 2rem;
+        line-height: 146.5%;
+        color: $color__light--gray;
+    }
+}

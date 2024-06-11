@@ -1,0 +1,21 @@
+@import "../../styles/_main";
+
+.section__title {
+    border: 1px solid $color__primary;
+    border-left: none;
+    border-right: none;
+    width: fit-content;
+
+    padding: 1.1rem 0 .6rem 0;
+
+    &--title {
+        @extend .josefin__medium--15;
+        text-transform: uppercase;
+        line-height: 77.1%;
+        letter-spacing: .27rem;
+    }
+}
+
+.white {
+    color: $color__white;
+}

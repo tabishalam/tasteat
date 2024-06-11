@@ -1,0 +1,54 @@
+@import "./_main";
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-size: 62.5%;
+}
+
+
+// Heading styles 
+
+// h1 {
+//   color: $color__secondary;
+//   @extend .cormorant__bold--65;
+// }
+
+// h2 {
+//   color: $color__secondary;
+//   @extend .cormorant__bold--60;
+// }
+
+// h3 {
+//   color: $color__secondary;
+//   @extend .cormorant__bold--55;
+// }
+
+// h4 {
+//   color: $color__secondary;
+//   @extend .cormorant__bold--40;
+// }
+
+// h5 {
+//   color: $color__secondary;
+//   @extend .cormorant__bold--30;
+// }
+
+// h6 {
+//   color: $color__secondary;
+//   @extend .cormorant__bold--25;
+// }

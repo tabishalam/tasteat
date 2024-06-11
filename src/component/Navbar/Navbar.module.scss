@@ -1,0 +1,39 @@
+@import "../../styles/_main";
+
+.nav  {
+    @include flex__row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2rem 20rem;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: $color__slate;
+    background: $color__secondary;
+
+    &__links {
+        @include flex__row;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    &__link {
+        list-style: none;
+        @extend .josefin__regular--20;
+
+        & a {
+            color: $color__light--gray;
+            text-decoration: none;
+        }
+    }
+
+    &__social {
+        @include flex__row;
+        align-items: center;
+        gap: 1.2rem;
+
+        & li {
+            list-style: none;
+        }
+    } 
+}

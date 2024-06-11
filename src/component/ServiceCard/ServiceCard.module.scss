@@ -1,0 +1,23 @@
+@import "../../styles/_main";
+
+.service__card {
+    @include flex__column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    width: 21.1rem;
+    padding: 3rem 0;
+    border: 2rem solid #323841;
+
+    &--image {
+        height: 5.4rem;
+        width: 5.4rem;
+    }
+
+    &--title {
+        @extend .cormorant__bold--25;
+        line-height: 119.6%;
+        color: $color__white;
+    }
+}

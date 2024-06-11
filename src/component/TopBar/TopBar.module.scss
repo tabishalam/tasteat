@@ -1,0 +1,15 @@
+@import "../../styles/main";
+
+.topbar {
+    @include flex__row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 5rem 20rem;
+    background-color: $color__secondary;
+
+    .container--right {
+        @include flex__row;
+        gap: 3rem;
+    }
+}
